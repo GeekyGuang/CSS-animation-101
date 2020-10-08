@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+    <style>
+      body {
+        background: #333;
+      }
+
+      button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border: 2px solid white;
+        border-radius: 4px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: green;
+        color: white;
+        font-size: 30px;
+      }
+
+      button {
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Hover me!</button>
+  </body>
+</html>
