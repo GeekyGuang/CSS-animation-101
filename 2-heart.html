@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+    <style>
+        .heart{
+            border: 1px solid red;
+            height: 100px;
+            width: 100px;
+            background-image: url(https://cssanimation.rocks/images/posts/steps/heart.png);
+            background-position: 0 0;
+        }
+        .heart:hover {
+            background-position: -2800px 0;
+            transition: all 1s steps(28);
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
