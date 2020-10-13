@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxUp</title>
+    <style>
+        body {
+            background: #1acbfc;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            background: white;
+            transform-origin: left bottom;
+            animation: up 5s ease-out infinite;
+        }
+
+        @keyframes up {
+            0%{
+                transform: none;
+                animation-timing-function: cubic-bezier(.57,-0.5,.43,1.53);
+            }
+            6%,10% {
+                transform: rotate(-45deg);
+            }
+            15% {
+                transform: rotate(-40deg);
+            }
+            17% {
+                transform: rotate(-42deg);
+            }
+            19% {
+                transform: rotate(-38deg);
+            }
+            21% {
+                transform: rotate(-42deg);
+            }
+            23% {
+                transform: rotate(-40deg);
+            }
+            25% {
+                transform: rotate(-42deg);
+                animation-timing-function: cubic-bezier(.57,-0.5,.43,1.53);
+            }
+            35%, 100% {
+                transform: none;
+            }
+
+ 
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
