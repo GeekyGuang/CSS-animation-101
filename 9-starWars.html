@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starWars</title>
+    <style>
+        body {
+            background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+        }
+        .starwars-demo {
+            height: 17em;
+            left: 50%;
+            position: absolute;
+            top: 53%;
+            transform: translate(-50%, -50%);
+            width: 34em;
+        }
+        .star, .wars, .byline {
+            position: absolute;
+        }
+
+        .star {
+            top: -0.75em;
+        }
+
+        .wars {
+            bottom: -0.5em;
+        }
+        .byline {
+            color: white;
+            font-family: "ITC Serif Gothic", Lato;
+            font-size: 2.25em;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            left: -2em;
+            right: -2em;
+            text-align: center;
+            top: 29%;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="starwars-demo">
+        <img src="https://cssanimation.rocks/demo/starwars/images/star.svg" alt="" class="star">
+        <img src="https://cssanimation.rocks/demo/starwars/images/wars.svg" alt="" class="wars">
+        <h2 class="byline" id="byline">The Force Awakens</h2>
+    </div>
+    <script>
+        var byline = document.getElementById('byline');  	
+        bylineText = byline.innerHTML;										
+        bylineArr = bylineText.split('');									
+        byline.innerHTML = '';												
+
+        var span;					
+        var letter;
+
+        for(i=0;i<bylineArr.length;i++){									
+        span = document.createElement("span");					
+        letter = document.createTextNode(bylineArr[i]);	
+        if(bylineArr[i] == ' ') {												
+            byline.appendChild(letter);					
+        } else {
+                span.appendChild(letter);						
+            byline.appendChild(span); 					
+        }
+        }
+
+    </script>
+</body>
+</html>
